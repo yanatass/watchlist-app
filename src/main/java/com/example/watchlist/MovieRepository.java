@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface MovieRepository extends JpaRepository<Movie, Integer>{
     List<Movie> findByCategoryId(int categoryId);
-    Page<Movie> findByUserId(int userId, Pageable pageable);
+    Page<Movie> findByUserIdAndDeletedFalse(int userId, Pageable pageable);
 }

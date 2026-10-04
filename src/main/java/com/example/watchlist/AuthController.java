@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 public class AuthController {
     private final UserService userService;
+    private final RefreshTokenService refreshTokenService;
 
-    public AuthController(UserService userService) {
+    public AuthController(UserService userService, RefreshTokenService refreshTokenService) {
         this.userService = userService;
+        this.refreshTokenService = refreshTokenService;
     }
 
     @PostMapping("/register")
@@ -24,6 +26,15 @@ public class AuthController {
     public AuthResponseDto login(@Valid @RequestBody LoginDto loginDto) {
 
         return userService.login(loginDto);
+    }
+
+    @PostMapping("/refresh")
+    public AuthResponseDto refresh(@Valid @RequestBody RefreshTokenDto refreshTokenDto) {
+        String newAccessToken = refreshTokenService.refreshAccessToken(refreshTokenDto.getRefreshToken());
+        AuthResponseDto authResponseDto = new AuthResponseDto();
+        authResponseDto.setToken(newAccessToken);
+        return authResponseDto;
+
     }
 
 }

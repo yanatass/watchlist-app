@@ -1,17 +1,10 @@
 package com.example.watchlist;
 
+import jakarta.validation.constraints.NotBlank;
 
-public class AuthResponseDto {
-    private String token;
+public class RefreshTokenDto {
+    @NotBlank
     private String refreshToken;
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 
     public String getRefreshToken() {
         return refreshToken;

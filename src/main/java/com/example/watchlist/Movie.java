@@ -18,6 +18,7 @@ public class Movie {
     private Category category;
 
     private boolean watched;
+    private boolean deleted;
 
     @ManyToOne
     private User user;
@@ -52,6 +53,12 @@ public class Movie {
     }
     public void setUser(User user) {
         this.user = user;
+    }
+    public boolean isDeleted() {
+        return deleted;
+    }
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 
 

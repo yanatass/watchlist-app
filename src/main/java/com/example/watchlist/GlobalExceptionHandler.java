@@ -43,4 +43,9 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.FORBIDDEN);
     }
 
+    @ExceptionHandler(RefreshTokenExpired.class)
+    public ResponseEntity<String> handleRefreshTokenExpired(RefreshTokenExpired e){
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.FORBIDDEN);
+    }
+
 }
