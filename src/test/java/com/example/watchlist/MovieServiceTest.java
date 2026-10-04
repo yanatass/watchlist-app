@@ -69,7 +69,7 @@ import java.util.Optional;
         Mockito.when(movieRepository.findById(1)).thenReturn(Optional.of(movie));
         Mockito.when(userService.getCurrentUser()).thenReturn(user);
         movieService.deleteMovie(1);
-        Mockito.verify(movieRepository).deleteById(1);
+        Mockito.verify(movieRepository).save(movie);
 
         // Act: вызови movieService.deleteMovie(1)
 
