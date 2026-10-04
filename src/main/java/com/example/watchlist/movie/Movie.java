@@ -1,0 +1,67 @@
+package com.example.watchlist.movie;
+import com.example.watchlist.category.Category;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotBlank;
+import com.example.watchlist.user.User;
+
+@Entity
+public class Movie {
+    @Id
+    @GeneratedValue
+    private int id;
+
+    @NotBlank(message = "Write down all information!!!!!")
+    private String title;
+
+    @ManyToOne
+    private Category category;
+
+    private boolean watched;
+    private boolean deleted;
+
+    @ManyToOne
+    private User user;
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public Category getCategory() {
+        return category;
+    }
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    public boolean isWatched() {
+        return watched;
+    }
+    public void setWatched(boolean watched) {
+        this.watched = watched;
+    }
+    public User getUser() {
+        return user;
+
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
+    public boolean isDeleted() {
+        return deleted;
+    }
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
+
+
+}

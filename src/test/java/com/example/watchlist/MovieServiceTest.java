@@ -1,11 +1,11 @@
 package com.example.watchlist;
 
-import movie.AccessDenied;
-import category.CategoryRepository;
-import movie.Movie;
-import movie.MovieNotFound;
-import movie.MovieRepository;
-import movie.MovieService;
+import com.example.watchlist.movie.AccessDenied;
+import com.example.watchlist.category.CategoryRepository;
+import com.example.watchlist.movie.Movie;
+import com.example.watchlist.movie.MovieNotFound;
+import com.example.watchlist.movie.MovieRepository;
+import com.example.watchlist.movie.MovieService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,8 +13,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import user.User;
-import user.UserService;
+import com.example.watchlist.user.User;
+import com.example.watchlist.user.UserService;
 
 import java.util.Optional;
 

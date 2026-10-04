@@ -1,6 +1,6 @@
 package com.example.watchlist;
 
-import auth.JwtAuthFilter;
+import com.example.watchlist.auth.JwtAuthFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
