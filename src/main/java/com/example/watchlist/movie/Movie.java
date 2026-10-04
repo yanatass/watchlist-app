@@ -13,7 +13,7 @@ public class Movie {
     @GeneratedValue
     private int id;
 
-    @NotBlank(message = "Write down all information!!!!!")
+    @NotBlank(message = "{movie.title.required}")
     private String title;
 
     @ManyToOne

@@ -3,7 +3,7 @@ package com.example.watchlist.movie;
 import jakarta.validation.constraints.NotBlank;
 
 public class UpdateMovieDto {
-    @NotBlank
+    @NotBlank(message = "{movie.title.required}")
     private String title;
     private int categoryId;
     private boolean watched;

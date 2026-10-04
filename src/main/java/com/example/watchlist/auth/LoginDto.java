@@ -1,7 +1,11 @@
 package com.example.watchlist.auth;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class LoginDto {
+    @NotBlank(message = "{user.username.required}")
     private String username;
+    @NotBlank(message = "{user.password.required}")
     private String password;
 
     public String getUsername() {

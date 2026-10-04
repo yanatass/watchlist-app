@@ -3,9 +3,9 @@ package com.example.watchlist.auth;
 import jakarta.validation.constraints.NotBlank;
 
 public class RegisterDto {
-    @NotBlank
+    @NotBlank(message = "{user.username.required}")
     private String username;
-    @NotBlank
+    @NotBlank(message = "{user.password.required}")
     private String password;
 
     public String getUsername() {
