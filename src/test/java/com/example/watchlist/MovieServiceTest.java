@@ -1,5 +1,11 @@
 package com.example.watchlist;
 
+import movie.AccessDenied;
+import category.CategoryRepository;
+import movie.Movie;
+import movie.MovieNotFound;
+import movie.MovieRepository;
+import movie.MovieService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -7,6 +13,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import user.User;
+import user.UserService;
 
 import java.util.Optional;
 

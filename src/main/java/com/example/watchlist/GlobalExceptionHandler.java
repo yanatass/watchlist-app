@@ -1,13 +1,17 @@
 package com.example.watchlist;
 
 
+import auth.InvalidCredentials;
+import movie.AccessDenied;
+import auth.RefreshTokenExpired;
+import category.CategoryNotFound;
+import movie.MovieNotFound;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import java.nio.file.AccessDeniedException;
+import user.UserNotFound;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
